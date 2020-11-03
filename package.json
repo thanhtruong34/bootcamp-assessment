@@ -1,7 +1,6 @@
 {
   "name": "bootcamp-assessment",
   "version": "0.0.0",
-  "homepage": "https://thanhtruong34.github.io/bootcamp-assessment",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "gh-pages -d dist"
+    "build:prod": "ng build --prod --output-path docs --base-href=\"https://thanhtruong34.github.io/bootcamp-assessment/\""
   },
   "private": true,
   "dependencies": {
@@ -23,7 +22,6 @@
     "@angular/platform-browser": "~10.2.0",
     "@angular/platform-browser-dynamic": "~10.2.0",
     "@angular/router": "~10.2.0",
-    "gh-pages": "^3.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
