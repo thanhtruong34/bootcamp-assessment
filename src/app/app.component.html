@@ -1,0 +1,27 @@
+<div class="wrapper">
+  <form [formGroup]="calculatorForm" class="form">
+
+    <mat-form-field class="full-width">
+      <mat-label>First Number</mat-label>
+      <input matInput formControlName="firstNum" (keyup)="onNumberChanged()">
+      <mat-error *ngIf="firstNum.hasError('pattern')">
+        <strong>Number Only</strong>
+      </mat-error>
+    </mat-form-field>
+    <br /> <br />
+
+    <mat-form-field class="full-width">
+      <mat-label>Second Number</mat-label>
+      <input matInput formControlName="secondNum" (keyup)="onNumberChanged()">
+      <mat-error *ngIf="secondNum.hasError('pattern')">
+        <strong>Number Only</strong>
+      </mat-error>
+    </mat-form-field>
+
+  </form>
+  <br />
+  <br />
+
+  <label><h2>Sum: {{ sum }}</h2></label>
+  <br />
+</div>
